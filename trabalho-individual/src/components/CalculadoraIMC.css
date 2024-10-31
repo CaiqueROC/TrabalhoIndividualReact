@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa;
+  color: #005073;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.body {
+  text-align: center;
+  max-width: 400px;
+  background-color: #b3e5fc;
+  padding: 30px;
+  padding-left: 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #01579b;
+}
+
+main label {
+  font-weight: bold;
+  color: #005073;
+}
+
+main input[type="number"] {
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #01579b;
+  border-radius: 4px;
+  width: 100%;
+}
+
+main button {
+  background-color: #0277bd;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+main button:hover {
+  background-color: #01579b;
+}
+
+main h2,
+main p {
+  margin: 10px 0;
+  color: #00334e;
+}
+
+footer h2 {
+  font-size: 1em;
+  color: #005073;
+  margin-top: 20px;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
