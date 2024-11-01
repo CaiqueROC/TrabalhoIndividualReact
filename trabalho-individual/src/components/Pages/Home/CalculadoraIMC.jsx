@@ -8,15 +8,14 @@ function CalculadoraIMC() {
   const [classificacao, setClassificacao] = useState("");
 
   const calcularIMC = () => {
-
     if (peso == 0 || peso < 0 || altura == 0 || altura < 0) {
       alert("Insira valores válidos para peso e altura.");
     }
-
+    
     if (peso && altura) {
       const imcCalculado = peso / (altura * altura);
       setImc(imcCalculado.toFixed(2));
-
+      
       let classificacaoResultado = "";
 
       if (imcCalculado < 18.5) {
@@ -39,45 +38,29 @@ function CalculadoraIMC() {
 
   return (
     <div class="body">
-      <header>
-        <h1>Calculadora de IMC</h1>
-      </header>
+      <form action="">
+        <div className="peso">
+          <label>
+            Peso (kg):
+            <input type="number" onChange={(e) => setPeso(e.target.value)} />
+          </label>
+        </div>
 
-      <main>
-        <form action="">
-          <div className="peso">
-            <label>
-              Peso (kg):
-              <input
-                type="number"
-                onChange={(e) => setPeso(e.target.value)}
-              />
-            </label>
-          </div>
+        <div className="altura">
+          <label>
+            Altura (metros):
+            <input type="number" onChange={(e) => setAltura(e.target.value)} />
+          </label>
+        </div>
+      </form>
+      <button onClick={calcularIMC}>Calcular IMC</button>
 
-          <div className="altura">
-            <label>
-              Altura (metros):
-              <input
-                type="number"
-                onChange={(e) => setAltura(e.target.value)}
-              />
-            </label>
-          </div>
-        </form>
-        <button onClick={calcularIMC}>Calcular IMC</button>
-
-        {imc && (
-          <div className="resultado">
-            <h2>Seu IMC: {imc}</h2>
-            <p>Classificação: {classificacao}</p>
-          </div>
-        )}
-      </main>
-
-      <footer>
-        <h2>Desenvolvido por &copy;Caíque Ramos</h2>
-      </footer>
+      {imc && (
+        <div className="resultado">
+          <h2>Seu IMC: {imc}</h2>
+          <p>Classificação: {classificacao}</p>
+        </div>
+      )}
     </div>
   );
 }

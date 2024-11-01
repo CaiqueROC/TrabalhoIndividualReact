@@ -19,18 +19,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #01579b;
-}
 
-main label {
+
+label {
   font-weight: bold;
   color: #005073;
 }
 
-main input[type="number"] {
+input[type="number"] {
   margin: 10px 0;
   padding: 8px;
   border: 1px solid #01579b;
@@ -38,7 +34,7 @@ main input[type="number"] {
   width: 100%;
 }
 
-main button {
+button {
   background-color: #0277bd;
   color: #ffffff;
   border: none;
@@ -50,21 +46,15 @@ main button {
   transition: background-color 0.3s ease;
 }
 
-main button:hover {
+button:hover {
   background-color: #01579b;
 }
 
-main h2,
-main p {
+h2, p {
   margin: 10px 0;
   color: #00334e;
 }
 
-footer h2 {
-  font-size: 1em;
-  color: #005073;
-  margin-top: 20px;
-}
 
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
